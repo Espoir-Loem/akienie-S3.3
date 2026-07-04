@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cadence — La gestion de tâches premium pour les équipes qui livrent au bon tempo.">
+  <title>Cadence — Donnez le rythme à vos tâches</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Hidden inputs for theme and FAQ (CSS-only interactivity) -->
+  <input type="checkbox" id="theme-toggle" class="sr-only" aria-label="Basculer le thème">
+  <input type="checkbox" id="faq-1" class="sr-only">
+  <input type="checkbox" id="faq-2" class="sr-only">
+  <input type="checkbox" id="faq-3" class="sr-only">
+  <input type="checkbox" id="faq-4" class="sr-only">
+  <input type="checkbox" id="faq-5" class="sr-only">
+  <input type="checkbox" id="faq-6" class="sr-only">
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="#" class="logo">
+        <span class="logo__mark" aria-hidden="true"></span>
+        Cadence
+      </a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav__links">
+          <li><a href="#features">Fonctionnalités</a></li>
+          <li><a href="#how-it-works">Comment ça marche</a></li>
+          <li><a href="#pricing">Tarifs</a></li>
+        </ul>
+      </nav>
+      <div class="nav__actions">
+        <label for="theme-toggle" class="theme-toggle" role="button" tabindex="0" aria-pressed="false">
+          <span class="sr-only">Basculer le thème</span>
+          <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </label>
+        <a href="#pricing" class="btn btn--primary btn--small">Commencer</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ 1. HERO ============ -->
+    <section class="hero">
+      <div class="hero__content">
+        <p class="kicker">
+          <span class="kicker__chevron" aria-hidden="true"></span>
+          Gestion de projet moderne
+        </p>
+        <h1 class="hero__title">Organisez votre travail, <span class="text-gradient">simplement</span></h1>
+        <p class="hero__lead">
+          Cadence transforme vos to-do lists en un flux de travail fluide. Inspiré par les meilleures interfaces comme Linear et Trello.
+        </p>
+        <div class="hero__actions">
+          <a href="#pricing" class="btn btn--primary btn--large">Commencer gratuitement</a>
+          <a href="#kanban" class="btn btn--ghost btn--large">Voir la démo</a>
+        </div>
+        <div class="hero__trust">
+          <span class="trust-label">Déjà adopté par</span>
+          <div class="trust-logos">
+            <span class="trust-logo">Studio Lira</span>
+            <span class="trust-logo">Atelier Kola</span>
+            <span class="trust-logo">Nova Labs</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=600&fit=crop" alt="Équipe collaborant" class="hero-image">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2. STATS ============ -->
+    <section class="stats section">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">2K+</div>
+          <div class="stat-label">Équipes actives</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">1M+</div>
+          <div class="stat-label">Tâches gérées</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">99.9%</div>
+          <div class="stat-label">Disponibilité</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">4.8/5</div>
+          <div class="stat-label">Note moyenne</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. HOW IT WORKS ============ -->
+    <section class="how-it-works section" id="how-it-works">
+      <header class="section__header">
+        <p class="kicker kicker--center">
+          <span class="kicker__chevron" aria-hidden="true"></span>
+          Comment ça marche
+        </p>
+        <h2 class="section-title">Trois étapes simples</h2>
+        <p class="section__subtitle">Organisez votre équipe en quelques minutes</p>
+      </header>
+
+      <div class="steps-grid">
+        <article class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Créez votre board</h3>
+            <p>Choisissez un modèle ou créez votre propre tableau de bord personnalisé.</p>
+          </div>
+        </article>
+
+        <article class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Invitez votre équipe</h3>
+            <p>Ajoutez vos collègues et commencez à collaborer en temps réel.</p>
+          </div>
+        </article>
+
+        <article class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Organisez vos tâches</h3>
+            <p>Glissez-déposez, priorisez et terminez vos projets en record !</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 4. FEATURES ============ -->
+    <section class="features section" id="features">
+      <header class="section__header">
+        <p class="kicker kicker--center">
+          <span class="kicker__chevron" aria-hidden="true"></span>
+          Fonctionnalités
+        </p>
+        <h2 class="section-title">Tout ce dont vous avez besoin</h2>
+        <p class="section__subtitle">Des outils puissants, une interface intuitive</p>
+      </header>
+
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="3" y1="9" x2="21" y2="9"></line>
+              <line x1="9" y1="21" x2="9" y2="9"></line>
+            </svg>
+          </div>
+          <div class="feature-content">
+            <h3>Tableau Kanban</h3>
+            <p>Organisez vos tâches en colonnes, comme sur Trello. Glissez-déposez pour suivre votre progression.</p>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <div class="feature-content">
+            <h3>Collaboration</h3>
+            <p>Travaillez en équipe avec des commentaires, mentions et notifications en temps réel.</p>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+          </div>
+          <div class="feature-content">
+            <h3>Analytiques</h3>
+            <p>Suivez votre productivité avec des graphiques clairs et des rapports détaillés.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 5. KANBAN DEMO ============ -->
+    <section class="kanban section" id="kanban">
+      <header class="section__header">
+        <p class="kicker kicker--center">
+          <span class="kicker__chevron" aria-hidden="true"></span>
+          Visualisez
+        </p>
+        <h2 class="section-title">Votre workflow en un coup d'oeil</h2>
+      </header>
+
+      <div class="kanban-demo">
+        <div class="kanban-column">
+          <div class="kanban-column-header">
+            <span class="kanban-column-title">À faire</span>
+            <span class="kanban-column-count">3</span>
+          </div>
+          <div class="kanban-card">
+            <div class="kanban-card-tag tag-design">Design</div>
+            <h4 class="kanban-card-title">Créer la maquette homepage</h4>
+            <div class="kanban-card-meta">
+              <img src="https://i.pravatar.cc/24?img=32" alt="Avatar" class="kanban-card-avatar">
+              <span class="kanban-card-date">Due: 15 juil</span>
+            </div>
+          </div>
+          <div class="kanban-card">
+            <div class="kanban-card-tag tag-dev">Développement</div>
+            <h4 class="kanban-card-title">Intégrer l'API</h4>
+            <div class="kanban-card-meta">
+              <img src="https://i.pravatar.cc/24?img=15" alt="Avatar" class="kanban-card-avatar">
+              <span class="kanban-card-date">Due: 18 juil</span>
+            </div>
+          </div>
+          <div class="kanban-card">
+            <div class="kanban-card-tag tag-marketing">Marketing</div>
+            <h4 class="kanban-card-title">Rédiger le blog post</h4>
+            <div class="kanban-card-meta">
+              <img src="https://i.pravatar.cc/24?img=48" alt="Avatar" class="kanban-card-avatar">
+              <span class="kanban-card-date">Due: 20 juil</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="kanban-column">
+          <div class="kanban-column-header">
+            <span class="kanban-column-title">En cours</span>
+            <span class="kanban-column-count">2</span>
+          </div>
+          <div class="kanban-card kanban-card--featured">
+            <div class="kanban-card-image">
+              <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=400&h=200&fit=crop" alt="Projet en cours">
+            </div>
+            <div class="kanban-card-tag tag-dev">Développement</div>
+            <h4 class="kanban-card-title">Landing page responsive</h4>
+            <p class="kanban-card-desc">Adapter le site pour mobile et tablette</p>
+            <div class="kanban-card-meta">
+              <img src="https://i.pravatar.cc/24?img=12" alt="Avatar" class="kanban-card-avatar">
+              <span class="kanban-card-date">Due: 12 juil</span>
+            </div>
+          </div>
+          <div class="kanban-card">
+            <div class="kanban-card-tag tag-design">Design</div>
+            <h4 class="kanban-card-title">Système de couleurs</h4>
+            <div class="kanban-card-meta">
+              <img src="https://i.pravatar.cc/24?img=22" alt="Avatar" class="kanban-card-avatar">
+              <span class="kanban-card-date">Due: 10 juil</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="kanban-column">
+          <div class="kanban-column-header">
+            <span class="kanban-column-title">Terminé</span>
+            <span class="kanban-column-count">2</span>
+          </div>
+          <div class="kanban-card kanban-card--completed">
+            <div class="kanban-card-tag tag-marketing">Marketing</div>
+            <h4 class="kanban-card-title">Lancement campagne</h4>
+            <div class="kanban-card-meta">
+              <img src="https://i.pravatar.cc/24?img=5" alt="Avatar" class="kanban-card-avatar">
+              <span class="kanban-card-date">Terminé</span>
+            </div>
+          </div>
+          <div class="kanban-card kanban-card--completed">
+            <div class="kanban-card-tag tag-dev">Développement</div>
+            <h4 class="kanban-card-title">Authentification</h4>
+            <div class="kanban-card-meta">
+              <img src="https://i.pravatar.cc/24?img=8" alt="Avatar" class="kanban-card-avatar">
+              <span class="kanban-card-date">Terminé</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. TESTIMONIALS ============ -->
+    <section class="testimonials section" id="testimonials">
+      <header class="section__header">
+        <p class="kicker kicker--center">
+          <span class="kicker__chevron" aria-hidden="true"></span>
+          Ce qu'ils disent
+        </p>
+        <h2 class="section-title">Avis de nos clients</h2>
+        <p class="section__subtitle">Des équipes qui ont transformé leur productivité</p>
+      </header>
+
+      <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <div class="testimonial-quote">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"></path>
+            </svg>
+            Cadence a complètement transformé la façon dont nous travaillons. Nos réunions ont diminué de 40% !
+          </div>
+          <div class="testimonial-author">
+            <img src="https://i.pravatar.cc/64?img=32" alt="Marie Dupont" class="testimonial-avatar">
+            <div class="testimonial-info">
+              <div class="testimonial-name">Marie Dupont</div>
+              <div class="testimonial-role">CEO, StartupXYZ</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card testimonial-card--featured">
+          <div class="testimonial-quote">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"></path>
+            </svg>
+            L'interface est tellement intuitive que même les nouveaux collaborateurs sont opérationnels en 5 minutes !
+          </div>
+          <div class="testimonial-author">
+            <img src="https://i.pravatar.cc/64?img=15" alt="Lucas Martin" class="testimonial-avatar">
+            <div class="testimonial-info">
+              <div class="testimonial-name">Lucas Martin</div>
+              <div class="testimonial-role">Lead Dev, TechCorp</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-quote">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"></path>
+            </svg>
+            Meilleur investissement cette année ! La productivité de l'équipe a bondi.
+          </div>
+          <div class="testimonial-author">
+            <img src="https://i.pravatar.cc/64?img=48" alt="Sophie Bernard" class="testimonial-avatar">
+            <div class="testimonial-info">
+              <div class="testimonial-name">Sophie Bernard</div>
+              <div class="testimonial-role">Product Owner, NovaLabs</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 7. PRICING ============ -->
+    <section class="pricing section" id="pricing">
+      <header class="section__header">
+        <p class="kicker kicker--center">
+          <span class="kicker__chevron" aria-hidden="true"></span>
+          Tarifs
+        </p>
+        <h2 class="section-title">Choisissez votre plan</h2>
+        <p class="section__subtitle">Commencez gratuitement, évoluez selon vos besoins</p>
+      </header>
+
+      <div class="pricing-grid">
+        <article class="price-card">
+          <div class="price-card-header">
+            <h3>Starter</h3>
+            <p class="price-card__desc">Pour démarrer seul</p>
+          </div>
+          <div class="price-wrapper">
+            <span class="price-currency">€</span>
+            <span class="price">0</span>
+            <span class="price__period">/mois</span>
+          </div>
+          <ul class="price-list">
+            <li>Jusqu'à 20 tâches actives</li>
+            <li>1 espace de travail</li>
+            <li>Accès base</li>
+          </ul>
+          <a href="#" class="btn btn--ghost btn--block">Commencer</a>
+        </article>
+
+        <article class="price-card price-card--featured">
+          <div class="price-card-badge">Populaire</div>
+          <div class="price-card-header">
+            <h3>Pro</h3>
+            <p class="price-card__desc">Pour les équipes</p>
+          </div>
+          <div class="price-wrapper">
+            <span class="price-currency">€</span>
+            <span class="price">12</span>
+            <span class="price__period">/mois</span>
+          </div>
+          <ul class="price-list">
+            <li>Tâches illimitées</li>
+            <li>Espaces illimités</li>
+            <li>Collaboration en équipe</li>
+            <li>Analytiques avancées</li>
+          </ul>
+          <a href="#" class="btn btn--primary btn--block">Essayer Pro</a>
+        </article>
+
+        <article class="price-card">
+          <div class="price-card-header">
+            <h3>Business</h3>
+            <p class="price-card__desc">Pour les grandes équipes</p>
+          </div>
+          <div class="price-wrapper">
+            <span class="price-currency">€</span>
+            <span class="price">29</span>
+            <span class="price__period">/mois</span>
+          </div>
+          <ul class="price-list">
+            <li>Tout de Pro</li>
+            <li>SSO & sécurité</li>
+            <li>Support prioritaire</li>
+            <li>API complète</li>
+          </ul>
+          <a href="#" class="btn btn--ghost btn--block">Nous contacter</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 8. FAQ ============ -->
+    <section class="faq section" id="faq">
+      <header class="section__header">
+        <p class="kicker kicker--center">
+          <span class="kicker__chevron" aria-hidden="true"></span>
+          FAQ
+        </p>
+        <h2 class="section-title">Questions fréquentes</h2>
+      </header>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <label for="faq-1" class="faq-trigger" role="button" tabindex="0" aria-expanded="false">
+            <span class="faq-question">Puis-je annuler à tout moment ?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </label>
+          <div class="faq-content">
+            <p class="faq-answer">Oui absolument ! Vous pouvez résilier votre abonnement en 1 clic depuis votre tableau de bord. Pas de frais cachés.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <label for="faq-2" class="faq-trigger" role="button" tabindex="0" aria-expanded="false">
+            <span class="faq-question">Proposez-vous un essai gratuit ?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </label>
+          <div class="faq-content">
+            <p class="faq-answer">Le plan Starter est gratuit à vie ! Pour les plans Pro et Business, vous bénéficiez de 14 jours d'essai gratuit.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <label for="faq-3" class="faq-trigger" role="button" tabindex="0" aria-expanded="false">
+            <span class="faq-question">Y a-t-il une limite d'utilisateurs ?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </label>
+          <div class="faq-content">
+            <p class="faq-answer">Le plan Starter est pour 1 utilisateur. Pro et Business acceptent des équipes de toutes tailles.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <label for="faq-4" class="faq-trigger" role="button" tabindex="0" aria-expanded="false">
+            <span class="faq-question">Mes données sont-elles sécurisées ?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </label>
+          <div class="faq-content">
+            <p class="faq-answer">100% ! Nous utilisons le chiffrement AES-256 et nous conformons à la RGPD. Vos données sont en sécurité.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <label for="faq-5" class="faq-trigger" role="button" tabindex="0" aria-expanded="false">
+            <span class="faq-question">Intégrez-vous d'autres outils ?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </label>
+          <div class="faq-content">
+            <p class="faq-answer">Bien sûr ! Nous avons des intégrations avec Slack, GitHub, Notion, Figma et bien d'autres.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <label for="faq-6" class="faq-trigger" role="button" tabindex="0" aria-expanded="false">
+            <span class="faq-question">Comment puis-je contacter le support ?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </label>
+          <div class="faq-content">
+            <p class="faq-answer">Notre équipe est disponible 7j/7 par chat en direct ou par email. Les clients Business bénéficient d'un support dédié.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 9. CTA ============ -->
+    <section class="cta section">
+      <div class="cta__inner">
+        <div class="cta__content">
+          <p class="kicker">
+            <span class="kicker__chevron" aria-hidden="true"></span>
+            Prêt à commencer
+          </p>
+          <h2>Organisez votre travail dès aujourd'hui</h2>
+          <p>Rejoignez des milliers d'équipes qui utilisent Cadence pour booster leur productivité.</p>
+          <div class="cta__actions">
+            <a href="#pricing" class="btn btn--primary btn--large">Commencer gratuitement</a>
+          </div>
+        </div>
+        <div class="cta__image">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop" alt="Équipe productive">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ 10. FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="#" class="logo logo--footer">
+          <span class="logo__mark" aria-hidden="true"></span>
+          Cadence
+        </a>
+        <p>L'app qui donne le rythme aux équipes qui livrent.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Produit</h4>
+        <ul>
+          <li><a href="#features">Fonctionnalités</a></li>
+          <li><a href="#how-it-works">Comment ça marche</a></li>
+          <li><a href="#pricing">Tarifs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Entreprise</h4>
+        <ul>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">Carrières</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col footer__newsletter">
+        <h4>Newsletter</h4>
+        <form class="newsletter-form">
+          <label for="newsletter-email" class="sr-only">Adresse email</label>
+          <input type="email" id="newsletter-email" placeholder="vous@email.com" required autocomplete="email">
+          <button type="submit" class="btn btn--primary btn--small">S'inscrire</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; 2026 Cadence. Projet 3.3 — Akieni Academy.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
