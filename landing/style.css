@@ -4,6 +4,7 @@
 
 /** Reset */
 @layer reset {
+
   *,
   *::before,
   *::after {
@@ -34,6 +35,7 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -453,7 +455,7 @@
     opacity: 0.6;
   }
 
-  .nav__list li + li a {
+  .nav__list li+li a {
     border-left: 1px solid var(--text-on-primary-dim);
     padding-left: 1rem;
   }
@@ -503,11 +505,14 @@
     display: flex;
     align-items: center;
     gap: 3rem;
-    flex-wrap: wrap;
   }
 
   .hero__copy {
     flex: 1 1 440px;
+
+    @media screen and (max-width: 800px) {
+      flex: 1 1 260px;
+    }
   }
 
   .hero__copy h1 {
@@ -547,7 +552,7 @@
     font-weight: 700;
   }
 
-  .hero__copy .availability span + span::before {
+  .hero__copy .availability span+span::before {
     content: "\2022";
     margin-right: 0.5em;
   }
@@ -557,12 +562,16 @@
     margin: 0;
   }
 
-  .hero__svg {
+  .hero__img {
     width: 100%;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     border: 2px solid var(--text-on-primary);
+    display: block;
+    @media screen and (max-width: 800px) {
+       margin-bottom: 3rem;
+    }
   }
 
   .hero__actions {
@@ -570,6 +579,9 @@
     gap: 1rem;
     margin-top: 2.2rem;
     align-items: stretch;
+     @media screen and (max-width: 800px) {
+       margin-bottom: 5rem;
+    }
   }
 
   .feature-strip {
@@ -583,7 +595,7 @@
     padding: 1.4rem 1.2rem 0 0;
   }
 
-  .feature-strip li ~ li {
+  .feature-strip li~li {
     border-left: 1px solid var(--text-on-primary-dim);
     padding-left: 1.2rem;
   }
@@ -781,7 +793,7 @@
     margin-top: 0.15rem;
   }
 
-  .testimonials > .testimonial:nth-child(2) {
+  .testimonials>.testimonial:nth-child(2) {
     background-color: #1a1a17;
   }
 
@@ -939,7 +951,7 @@
       color: var(--text-on-primary);
     }
 
-    .nav__list li + li a {
+    .nav__list li+li a {
       border-left: none;
       padding-left: 0;
     }
@@ -982,7 +994,7 @@
 
     .hero__grid {
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 0.5rem;
     }
 
     .hero__visual {
@@ -992,6 +1004,7 @@
 
     .hero__actions {
       margin-top: 1.2rem;
+
     }
 
     .feature-strip {
@@ -1017,7 +1030,7 @@
     }
 
     .feature-strip li,
-    .feature-strip li ~ li {
+    .feature-strip li~li {
       border-left: none;
       padding-left: 0;
       border-top: 1px solid var(--text-on-primary-dim);
