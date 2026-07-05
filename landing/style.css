@@ -292,8 +292,9 @@
   .card__period {
     align-self: center;
     font-family: var(--font-mono);
-    font-size: 0.78rem;
+    font-size: 1rem;
     font-weight: 400;
+    margin-top: 0.6rem;
     color: var(--text-faint);
     text-transform: uppercase;
   }
