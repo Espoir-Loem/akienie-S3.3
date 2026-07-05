@@ -982,6 +982,7 @@
 
     .hero__grid {
       flex-direction: column;
+      gap: 1.5rem;
     }
 
     .hero__visual {
@@ -989,7 +990,12 @@
       width: 100%;
     }
 
+    .hero__actions {
+      margin-top: 1.2rem;
+    }
+
     .feature-strip {
+      margin-top: 2rem;
       grid-template-columns: repeat(2, 1fr);
     }
 
