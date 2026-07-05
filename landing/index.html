@@ -11,11 +11,11 @@
 </head>
 
 <body>
+
   <header class="header">
-    <div class="relative">
+    <div class="header__inner">
       <a href="/" class="logo">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
           <rect x="3" y="5" width="6" height="6" rx="1" />
           <rect x="3" y="15" width="6" height="6" rx="1" />
           <path d="M13 8h8" />
@@ -23,34 +23,39 @@
         </svg>
         <span>TACHE</span>
       </a>
-
-      <input type="checkbox" id="nav-toggle" class="nav-toggle">
-      <label for="nav-toggle" class="nav-burger" aria-label="Ouvrir le menu">
+      <a href="#nav" class="nav-burger" aria-label="Menu">
         <span></span><span></span><span></span>
-      </label>
-
-      <nav>
-        <ul>
+      </a>
+      <a href="#" class="nav-close" aria-label="Fermer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+      </a>
+      <nav id="nav" class="nav">
+        <ul class="nav__list">
           <li><a href="#fonctionnalites">Fonctionnalités</a></li>
+          <li><a href="#equipes">Équipes</a></li>
           <li><a href="#avis">Avis</a></li>
           <li><a href="#tarifs">Tarifs</a></li>
         </ul>
-        <a href="#tarifs" class="btn btn--on-light">Commencer</a>
+        <a href="#tarifs" class="btn btn--ghost btn--sm">Commencer</a>
       </nav>
     </div>
   </header>
 
   <main>
+
     <section class="herosection">
-      <div>
+      <div class="hero__inner">
+
         <div class="eyebrow">
           <span>// Planification</span>
           <div class="separator"></div>
           <span>// Collaboration</span>
         </div>
 
-        <div class="hero-grid">
-          <div class="hero-copy">
+        <div class="hero__grid">
+          <div class="hero__copy">
             <h1>La gestion de tâches, <em>enfin fluide</em>.</h1>
             <p class="lead">TACHE réunit planification, collaboration en temps réel et automatisations dans un seul
               espace de travail, pensé pour les équipes qui n'ont pas de temps à perdre en outils.</p>
@@ -61,171 +66,256 @@
               <span><strong>iOS</strong></span>
               <span><strong>Android</strong></span>
             </p>
-
-
           </div>
 
-          <figure class="hero_img">
-            <img
-              src="https://images.pexels.com/photos/3243/pen-calendar-to-do-checklist.jpg?auto=compress&cs=tinysrgb&w=1200"
-              alt="Planning de tâches et liste à faire sur un bureau, symbolisant l'organisation">
+          <figure class="hero__visual" aria-label="Aperçu de l'interface TACHE">
+            <svg viewBox="0 0 520 400" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero__svg">
+              <rect width="520" height="400" rx="16" fill="#141414" />
+              <rect x="20" y="20" width="145" height="360" rx="10" fill="#1a1a1a" />
+              <rect x="187" y="20" width="145" height="360" rx="10" fill="#1a1a1a" />
+              <rect x="354" y="20" width="145" height="360" rx="10" fill="#1a1a1a" />
+              <rect x="36" y="40" width="114" height="22" rx="6" fill="#2a2a2a" />
+              <rect x="203" y="40" width="114" height="22" rx="6" fill="#2a2a2a" />
+              <rect x="370" y="40" width="114" height="22" rx="6" fill="#2a2a2a" />
+              <text x="40" y="55" fill="#a3a3a3" font-size="11" font-family="sans-serif">À faire</text>
+              <text x="207" y="55" fill="#a3a3a3" font-size="11" font-family="sans-serif">En cours</text>
+              <text x="374" y="55" fill="#a3a3a3" font-size="11" font-family="sans-serif">Terminé</text>
+              <rect x="36" y="78" width="114" height="70" rx="8" fill="#222" stroke="#2a2a2a" stroke-width="1" />
+              <rect x="46" y="90" width="94" height="6" rx="3" fill="#ccff00" opacity="0.3" />
+              <rect x="46" y="104" width="80" height="4" rx="2" fill="#4a4a4a" />
+              <rect x="46" y="114" width="60" height="4" rx="2" fill="#4a4a4a" />
+              <rect x="46" y="130" width="40" height="6" rx="3" fill="#ccff00" opacity="0.6" />
+              <rect x="36" y="160" width="114" height="70" rx="8" fill="#222" stroke="#2a2a2a" stroke-width="1" />
+              <rect x="46" y="172" width="94" height="6" rx="3" fill="#3b82f6" opacity="0.3" />
+              <rect x="46" y="186" width="70" height="4" rx="2" fill="#4a4a4a" />
+              <rect x="46" y="196" width="85" height="4" rx="2" fill="#4a4a4a" />
+              <rect x="46" y="212" width="40" height="6" rx="3" fill="#3b82f6" opacity="0.6" />
+              <rect x="203" y="78" width="114" height="70" rx="8" fill="#222" stroke="#2a2a2a" stroke-width="1" />
+              <rect x="213" y="90" width="94" height="6" rx="3" fill="#f59e0b" opacity="0.3" />
+              <rect x="213" y="104" width="60" height="4" rx="2" fill="#4a4a4a" />
+              <rect x="213" y="114" width="75" height="4" rx="2" fill="#4a4a4a" />
+              <rect x="213" y="130" width="40" height="6" rx="3" fill="#f59e0b" opacity="0.6" />
+              <rect x="203" y="160" width="114" height="70" rx="8" fill="#222" stroke="#2a2a2a" stroke-width="1" />
+              <rect x="213" y="172" width="94" height="6" rx="3" fill="#ccff00" opacity="0.3" />
+              <rect x="213" y="186" width="65" height="4" rx="2" fill="#4a4a4a" />
+              <rect x="213" y="196" width="80" height="4" rx="2" fill="#4a4a4a" />
+              <rect x="213" y="212" width="40" height="6" rx="3" fill="#ccff00" opacity="0.6" />
+              <rect x="370" y="78" width="114" height="70" rx="8" fill="#222" stroke="#2a2a2a" stroke-width="1" />
+              <rect x="380" y="90" width="94" height="6" rx="3" fill="#ccff00" opacity="0.6" />
+              <rect x="380" y="104" width="50" height="4" rx="2" fill="#4a4a4a" />
+              <rect x="380" y="114" width="70" height="4" rx="2" fill="#4a4a4a" />
+              <rect x="380" y="130" width="30" height="6" rx="3" fill="#ccff00" opacity="0.8" />
+              <rect x="370" y="160" width="114" height="70" rx="8" fill="#222" stroke="#2a2a2a" stroke-width="1" />
+              <rect x="380" y="172" width="94" height="6" rx="3" fill="#ccff00" opacity="0.6" />
+              <rect x="380" y="186" width="55" height="4" rx="2" fill="#4a4a4a" />
+              <rect x="380" y="196" width="75" height="4" rx="2" fill="#4a4a4a" />
+              <rect x="380" y="212" width="30" height="6" rx="3" fill="#ccff00" opacity="0.8" />
+              <rect x="36" y="252" width="114" height="40" rx="8" fill="#ccff00" opacity="0.1" stroke="#ccff00" stroke-width="1" stroke-dasharray="4 4" />
+              <text x="48" y="276" fill="#ccff00" font-size="12" font-family="sans-serif" font-weight="600">+ Ajouter une tâche</text>
+              <rect x="203" y="252" width="114" height="40" rx="8" fill="#ccff00" opacity="0.1" stroke="#ccff00" stroke-width="1" stroke-dasharray="4 4" />
+              <text x="215" y="276" fill="#ccff00" font-size="12" font-family="sans-serif" font-weight="600">+ Ajouter une tâche</text>
+              <rect x="370" y="252" width="114" height="40" rx="8" fill="#ccff00" opacity="0.1" stroke="#ccff00" stroke-width="1" stroke-dasharray="4 4" />
+              <text x="382" y="276" fill="#ccff00" font-size="12" font-family="sans-serif" font-weight="600">+ Ajouter une tâche</text>
+              <circle cx="460" cy="36" r="4" fill="#ccff00" opacity="0.5" />
+              <circle cx="460" cy="50" r="4" fill="#f59e0b" opacity="0.5" />
+              <circle cx="460" cy="64" r="4" fill="#3b82f6" opacity="0.5" />
+            </svg>
           </figure>
         </div>
 
-        <div class="cta-row">
+        <div class="hero__actions">
           <a href="#tarifs" class="btn btn--solid">Commencer gratuitement</a>
           <div class="dot-box" aria-hidden="true"></div>
         </div>
 
         <ul class="feature-strip">
           <li>
-            <p class="num">01</p>
+            <p class="feature-strip__num">01</p>
             <strong>Gratuit</strong>
             <p>Aucune carte bancaire nécessaire pour démarrer.</p>
           </li>
           <li>
-            <p class="num">02</p>
+            <p class="feature-strip__num">02</p>
             <strong>Temps réel</strong>
             <p>Synchronisation instantanée entre tous les membres.</p>
           </li>
           <li>
-            <p class="num">03</p>
+            <p class="feature-strip__num">03</p>
             <strong>Automatisé</strong>
             <p>Des règles simples pour éliminer le travail répétitif.</p>
           </li>
           <li>
-            <p class="num">04</p>
+            <p class="feature-strip__num">04</p>
             <strong>Multi-vues</strong>
             <p>Kanban, Timeline et tableaux de bord en un clic.</p>
           </li>
           <li>
-            <p class="num">05</p>
+            <p class="feature-strip__num">05</p>
             <strong>Sécurisé</strong>
             <p>Rôles, permissions et sauvegardes automatiques.</p>
           </li>
         </ul>
+
       </div>
     </section>
 
-    <section class="block" id="fonctionnalites">
+    <section class="section" id="fonctionnalites">
       <div class="container">
-        <header class="section-head">
-          <h6 class="eyebrow"><span>01&gt; Fonctionnalités</span></h6>
-          <h2>Tout ce qu'il faut pour avancer, rien de superflu.</h2>
-          <p>Six briques essentielles, conçues pour s'assembler naturellement dans le flux de travail de votre équipe.
-          </p>
+        <header class="section__head">
+          <h6 class="eyebrow">01 &mdash; Fonctionnalités</h6>
+          <h2 class="section__title">Tout ce qu'il faut pour avancer, rien de superflu.</h2>
+          <p class="section__desc">Six briques essentielles, conçues pour s'assembler naturellement dans le flux de travail de votre équipe.</p>
         </header>
-        <div class="features-grid">
-          <article class="feature-card">
+        <div class="features">
+          <article class="feature">
             <div class="feature-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M9 11l3 3L22 4" />
                 <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
               </svg>
             </div>
-            <p class="feature-tag">FIG.01</p>
-            <h3>Planification intelligente</h3>
-            <p>Des échéances recalculées automatiquement selon la charge réelle de chaque membre.</p>
+            <p class="feature__tag">FIG.01</p>
+            <h3 class="feature__title">Planification intelligente</h3>
+            <p class="feature__desc">Des échéances recalculées automatiquement selon la charge réelle de chaque membre.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature">
             <div class="feature-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="9" cy="7" r="4" />
                 <path d="M17 11a4 4 0 100-8 4 4 0 000 8z" />
                 <path d="M1 21v-2a4 4 0 014-4h4a4 4 0 014 4v2" />
               </svg>
             </div>
-            <p class="feature-tag">FIG.02</p>
-            <h3>Collaboration en temps réel</h3>
-            <p>Commentaires et statuts se mettent à jour instantanément pour tout le monde.</p>
+            <p class="feature__tag">FIG.02</p>
+            <h3 class="feature__title">Collaboration temps réel</h3>
+            <p class="feature__desc">Commentaires et statuts se mettent à jour instantanément pour toute l'équipe.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature">
             <div class="feature-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" />
               </svg>
             </div>
-            <p class="feature-tag">FIG.03</p>
-            <h3>Automatisations</h3>
-            <p>Des règles « quand X alors Y » pour supprimer les tâches répétitives.</p>
+            <p class="feature__tag">FIG.03</p>
+            <h3 class="feature__title">Automatisations</h3>
+            <p class="feature__desc">Des règles « quand X alors Y » pour supprimer les tâches répétitives.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature">
             <div class="feature-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="3" y="3" width="7" height="7" />
                 <rect x="14" y="3" width="7" height="7" />
                 <rect x="14" y="14" width="7" height="7" />
                 <rect x="3" y="14" width="7" height="7" />
               </svg>
             </div>
-            <p class="feature-tag">FIG.04</p>
-            <h3>Vues Kanban & Timeline</h3>
-            <p>Basculez d'une vue tableau à une frise chronologique sans dupliquer vos données.</p>
+            <p class="feature__tag">FIG.04</p>
+            <h3 class="feature__title">Vues Kanban & Timeline</h3>
+            <p class="feature__desc">Basculez d'une vue tableau à une frise chronologique sans dupliquer vos données.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature">
             <div class="feature-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M3 3v18h18" />
                 <path d="M18 17V9M13 17V5M8 17v-3" />
               </svg>
             </div>
-            <p class="feature-tag">FIG.05</p>
-            <h3>Suivi de progression</h3>
-            <p>Des tableaux de bord clairs pour visualiser la vélocité de l'équipe.</p>
+            <p class="feature__tag">FIG.05</p>
+            <h3 class="feature__title">Suivi de progression</h3>
+            <p class="feature__desc">Des tableaux de bord clairs pour visualiser la vélocité de l'équipe.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature">
             <div class="feature-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="3" />
-                <path
-                  d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06A1.65 1.65 0 004.6 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06A1.65 1.65 0 009 4.6a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" />
+                <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06A1.65 1.65 0 004.6 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06A1.65 1.65 0 009 4.6a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" />
               </svg>
             </div>
-            <p class="feature-tag">FIG.06</p>
-            <h3>Intégrations</h3>
-            <p>Connectez messagerie, calendrier et dépôts de code sans configuration.</p>
+            <p class="feature__tag">FIG.06</p>
+            <h3 class="feature__title">Intégrations</h3>
+            <p class="feature__desc">Connectez messagerie, calendrier et dépôts de code sans configuration.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="block" id="avis">
+    <section class="section section--alt" id="equipes">
       <div class="container">
-        <header class="section-head">
-          <h6 class="eyebrow"><span>02&gt; Avis clients</span></h6>
-          <h2>Adopté par des équipes qui détestent perdre du temps.</h2>
+        <header class="section__head">
+          <h6 class="eyebrow">02 &mdash; Ils nous font confiance</h6>
+          <h2 class="section__title">Des équipes qui nous confient leurs produits clés.</h2>
+          <p class="section__desc">Des startups aux grandes entreprises, TACHE est adopté par les équipes qui exigent le meilleur.</p>
         </header>
-        <div class="testimonials-grid">
-          <blockquote class="testimonial-card">
-            <p class="quote">Depuis TACHE, notre réunion hebdomadaire de suivi a disparu. Le tableau de bord raconte
-              déjà tout.</p>
-            <div class="author">
-              <div class="avatar">LM</div>
+        <ul class="trusted">
+          <li class="trusted__item">
+            <span class="trusted__letter">EK</span>
+            <span class="trusted__name">Eko Solutions</span>
+            <span class="trusted__loc">Brazzaville</span>
+          </li>
+          <li class="trusted__item">
+            <span class="trusted__letter">KD</span>
+            <span class="trusted__name">Kongo Digital</span>
+            <span class="trusted__loc">Pointe-Noire</span>
+          </li>
+          <li class="trusted__item">
+            <span class="trusted__letter">NX</span>
+            <span class="trusted__name">NxtGen Solutions</span>
+            <span class="trusted__loc">Brazzaville</span>
+          </li>
+          <li class="trusted__item">
+            <span class="trusted__letter">EC</span>
+            <span class="trusted__name">Energy Congo</span>
+            <span class="trusted__loc">Pointe-Noire</span>
+          </li>
+          <li class="trusted__item">
+            <span class="trusted__letter">LC</span>
+            <span class="trusted__name">LogiCongo</span>
+            <span class="trusted__loc">Brazzaville</span>
+          </li>
+          <li class="trusted__item">
+            <span class="trusted__letter">YM</span>
+            <span class="trusted__name">Ya Mekô</span>
+            <span class="trusted__loc">Brazzaville</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="avis">
+      <div class="container">
+        <header class="section__head">
+          <h6 class="eyebrow">03 &mdash; Témoignages</h6>
+          <h2 class="section__title">Ce que disent nos utilisateurs.</h2>
+          <p class="section__desc">Des équipes congolaises qui ont transformé leur façon de travailler avec TACHE.</p>
+        </header>
+        <div class="testimonials">
+          <blockquote class="testimonial">
+            <p class="testimonial__text">« Depuis TACHE, notre réunion hebdomadaire de suivi a disparu. Le tableau de bord raconte déjà tout. On gagne 3 heures par semaine. »</p>
+            <div class="testimonial__author">
+              <div class="avatar">AM</div>
               <div>
-                <p class="name">Léa Moreau</p>
-                <p class="role">Cheffe de projet, Atelier Nord</p>
+                <p class="testimonial__name">Alain Makaya</p>
+                <p class="testimonial__role">Chef de projet, Energy Congo</p>
               </div>
             </div>
           </blockquote>
-          <blockquote class="testimonial-card">
-            <p class="quote">Les automatisations ont éliminé une dizaine de tâches manuelles que personne n'aimait
-              faire.</p>
-            <div class="author">
-              <div class="avatar">TK</div>
+          <blockquote class="testimonial">
+            <p class="testimonial__text">« Les automatisations ont éliminé une dizaine de tâches manuelles que personne n'aimait faire. Le gain de productivité est immense. »</p>
+            <div class="testimonial__author">
+              <div class="avatar">GB</div>
               <div>
-                <p class="name">Thomas Kader</p>
-                <p class="role">Responsable opérations, Nimbus</p>
+                <p class="testimonial__name">Grâce Boukaka</p>
+                <p class="testimonial__role">Directrice des opérations, NxtGen Solutions</p>
               </div>
             </div>
           </blockquote>
-          <blockquote class="testimonial-card">
-            <p class="quote">La vue Timeline a changé notre façon de planifier les sprints. Tout le monde voit la même
-              réalité.</p>
-            <div class="author">
-              <div class="avatar">SB</div>
+          <blockquote class="testimonial">
+            <p class="testimonial__text">« La vue Timeline a changé notre façon de planifier les sprints. Tout le monde voit la même réalité, plus besoin de longs emails. »</p>
+            <div class="testimonial__author">
+              <div class="avatar">JN</div>
               <div>
-                <p class="name">Sarah Benali</p>
-                <p class="role">Lead produit, Kiro</p>
+                <p class="testimonial__name">Jean-Claude Ndinga</p>
+                <p class="testimonial__role">Lead Produit, Kongo Digital</p>
               </div>
             </div>
           </blockquote>
@@ -233,46 +323,44 @@
       </div>
     </section>
 
-    <section class="block" id="tarifs">
+    <section class="section section--alt" id="tarifs">
       <div class="container">
-        <header class="section-head">
-          <h6 class="eyebrow"><span>03&gt; Tarifs</span></h6>
-          <h2>Un tarif honnête, qui grandit avec l'équipe.</h2>
-          <p>Commencez gratuitement, passez à l'échelle quand vous en avez besoin — jamais avant.</p>
+        <header class="section__head">
+          <h6 class="eyebrow">04 &mdash; Tarifs</h6>
+          <h2 class="section__title">Un tarif honnête, qui grandit avec l'équipe.</h2>
+          <p class="section__desc">Commencez gratuitement, passez à l'échelle quand vous en avez besoin — jamais avant.</p>
         </header>
-
-        <div class="pricing-grid">
-          <article class="pricing-card">
-            <div class="pricing-card__body">
-              <p class="pricing-card__name">Gratuit</p>
-              <hr class="pricing-card__rule">
-              <p class="pricing-card__price">0 XAF <span>toujours</span></p>
-              <p class="pricing-card__desc">Pour découvrir TACHE en solo ou en petite équipe.</p>
-              <ul class="pricing-card__features">
+        <div class="pricing">
+          <article class="card">
+            <div class="card__body">
+              <p class="card__name">Gratuit</p>
+              <hr class="card__rule">
+              <p class="card__price">0 FCFA <span class="card__period">toujours</span></p>
+              <p class="card__desc">Pour découvrir TACHE en solo ou en petite équipe.</p>
+              <ul class="card__features">
                 <li>Jusqu'à 3 espaces de travail</li>
                 <li>Vue Kanban illimitée</li>
                 <li>2 automatisations actives</li>
                 <li>Historique 14 jours</li>
               </ul>
             </div>
-            <footer class="pricing-card__footer">
+            <footer class="card__footer">
               <span>Commencer</span>
               <a href="#" class="icon-btn" aria-label="Choisir le plan Gratuit">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M7 17L17 7M17 7H8M17 7v9" />
                 </svg>
               </a>
             </footer>
           </article>
-
-          <article class="pricing-card pricing-card--featured">
-            <div class="pricing-card__body">
-              <p class="pricing-card__badge">Le plus populaire</p>
-              <p class="pricing-card__name">Pro</p>
-              <hr class="pricing-card__rule">
-              <p class="pricing-card__price">12 XAF <span>/ util. / mois</span></p>
-              <p class="pricing-card__desc">Pour les équipes qui veulent automatiser leur flux.</p>
-              <ul class="pricing-card__features">
+          <article class="card card--featured">
+            <div class="card__body">
+              <p class="card__badge">Le plus populaire</p>
+              <p class="card__name">Pro</p>
+              <hr class="card__rule">
+              <p class="card__price">3 000 FCFA <span class="card__period">/ util. / mois</span></p>
+              <p class="card__desc">Pour les équipes qui veulent automatiser leur flux.</p>
+              <ul class="card__features">
                 <li>Espaces de travail illimités</li>
                 <li>Vue Timeline & rapports</li>
                 <li>Automatisations illimitées</li>
@@ -280,33 +368,32 @@
                 <li>Intégrations avancées</li>
               </ul>
             </div>
-            <footer class="pricing-card__footer">
+            <footer class="card__footer">
               <span>Essayer 14 jours</span>
               <a href="#" class="icon-btn" aria-label="Choisir le plan Pro">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M7 17L17 7M17 7H8M17 7v9" />
                 </svg>
               </a>
             </footer>
           </article>
-
-          <article class="pricing-card">
-            <div class="pricing-card__body">
-              <p class="pricing-card__name">Équipe</p>
-              <hr class="pricing-card__rule">
-              <p class="pricing-card__price">24 XAF <span>/ util. / mois</span></p>
-              <p class="pricing-card__desc">Pour les organisations avec des besoins de gouvernance.</p>
-              <ul class="pricing-card__features">
+          <article class="card">
+            <div class="card__body">
+              <p class="card__name">Équipe</p>
+              <hr class="card__rule">
+              <p class="card__price">7 500 FCFA <span class="card__period">/ util. / mois</span></p>
+              <p class="card__desc">Pour les organisations avec des besoins de gouvernance.</p>
+              <ul class="card__features">
                 <li>Tout ce qui est inclus dans Pro</li>
                 <li>Rôles et permissions avancés</li>
                 <li>SSO & annuaire d'entreprise</li>
                 <li>Support prioritaire</li>
               </ul>
             </div>
-            <footer class="pricing-card__footer">
+            <footer class="card__footer">
               <span>Contacter l'équipe</span>
               <a href="#" class="icon-btn" aria-label="Choisir le plan Équipe">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M7 17L17 7M17 7H8M17 7v9" />
                 </svg>
               </a>
@@ -316,53 +403,54 @@
       </div>
     </section>
 
-    <section class="block">
+    <section class="cta">
       <div class="container">
-        <div class="cta-block">
-          <h2>Votre équipe mérite un outil qui suit le rythme.</h2>
-          <p>Aucune carte bancaire requise. Migrez vos tâches existantes en quelques minutes.</p>
-          <a href="#tarifs" class="btn">Créer mon espace gratuit</a>
+        <div class="cta__block">
+          <h2 class="cta__title">Votre équipe mérite un outil qui suit le rythme.</h2>
+          <p class="cta__desc">Aucune carte bancaire requise. Migrez vos tâches existantes en quelques minutes.</p>
+          <a href="#tarifs" class="btn btn--lg">Créer mon espace gratuit</a>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
+    <div class="container footer__grid">
+      <div class="footer__brand">
         <a href="/" class="logo"><span>TACHE</span></a>
         <p>L'espace de travail qui organise les tâches de votre équipe, sans jamais ralentir son rythme.</p>
       </div>
-      <div class="footer-col">
-        <h4>Produit</h4>
-        <ul>
+      <div class="footer__col">
+        <h4 class="footer__heading">Produit</h4>
+        <ul class="footer__list">
           <li><a href="#fonctionnalites">Fonctionnalités</a></li>
           <li><a href="#tarifs">Tarifs</a></li>
           <li><a href="#">Intégrations</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Ressources</h4>
-        <ul>
+      <div class="footer__col">
+        <h4 class="footer__heading">Ressources</h4>
+        <ul class="footer__list">
           <li><a href="#">Centre d'aide</a></li>
           <li><a href="#">Guides</a></li>
           <li><a href="#avis">Avis clients</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Entreprise</h4>
-        <ul>
+      <div class="footer__col">
+        <h4 class="footer__heading">Entreprise</h4>
+        <ul class="footer__list">
           <li><a href="#">À propos</a></li>
           <li><a href="#">Carrières</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
       </div>
     </div>
-    <div class="container footer-bottom">
-      <p>© 2026 TACHE. Tous droits réservés.</p>
+    <div class="container footer__bottom">
+      <p>&copy; 2026 TACHE. Tous droits réservés.</p>
       <p>Fait avec soin pour les équipes organisées.</p>
     </div>
   </footer>
-</body>
 
+</body>
 </html>
